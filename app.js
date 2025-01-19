@@ -5,9 +5,14 @@ const mongoose = require('mongoose');
 // express app
 const app = express();
 // MongoDB connection string
-const dbURI = 'mongodb+srv://fozil:JGPau2suaN2CFKgE@node-tuts.kdrvs.mongodb.net/?retryWrites=true&w=majority&appName=node-tuts';
+const dbURI = 'mongodb+srv://JGPau2suaN2CFKgE:fozil2002f@node-tuts.kdrvs.mongodb.net/?retryWrites=true&w=majority&appName=node-tuts';
 
 mongoose.connect(dbURI);
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB');
+}).on('error', (error) => {
+    console.log('Error:', error);
+});
 // register view engine
 app.set('view engine', 'ejs');
 

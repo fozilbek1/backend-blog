@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 // express app
 const app = express();
@@ -7,9 +8,13 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // listen for requests
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
-});
+app.listen(3000);
+
+// Middleware & static files
+app.use(express.static('public')); // Serve static files
+
+
+app.use(morgan('dev'));
 
 // Home route
 app.get('/', (req, res) => {

@@ -1,8 +1,11 @@
 const express = require('express');
 const morgan = require('morgan');
 
+
 // express app
 const app = express();
+// MongoDB connection string
+const dbURI = 'mongodb+srv://<db_username>:<db_password>@node-tuts.kdrvs.mongodb.net/?retryWrites=true&w=majority&appName=node-tuts';
 
 // register view engine
 app.set('view engine', 'ejs');

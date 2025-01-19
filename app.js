@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
         { title: 'Fozil finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur' },
         { title: 'How to defeat Yagr', snippet: 'Lorem ipsum dolor sit amet consectetur' }
     ];
-    res.render('index', { title: 'Home', blogs }); // Pass `title` and `blogs` to the view
+    res.render('index', { title: 'Home', blogs: blogs}); // Pass `title` and `blogs` to the view
 });
 
 // About route

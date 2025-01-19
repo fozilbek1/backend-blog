@@ -1,23 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Yagr | <%= title %></title>
-</head>
+    <%- include('./partials/head.ejs')%>
+
 <body>
 
-    <nav>
-        <div class="site-title">
-            <a href="/"><h1>Blog Yagr</h1></a>
-            <p>A Yagr Site</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-    </nav>
+    <%- include('./partials/nav.ejs')%>
 
     <div class="about content">
         <h2>About Us</h2>
@@ -26,6 +13,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias placeat totam ducimus, suscipit odio deleniti iusto eius commodi modi culpa aut consequuntur saepe facere perspiciatis magni est. Dolores, officiis? Nulla.</p>
 
     </div>
-    
+    <%- include('./partials/footer.ejs')%>
+
 </body>
 </html>
